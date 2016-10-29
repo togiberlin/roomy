@@ -1,2 +1,2 @@
-# hotel_room_booker
-A hotel booking software, written in Ruby on Rails
+# HK Room Finder App
+A hotel booking app, written in Ruby on Rails
