@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HKRoomFinder</title>
+    <title>HK Room Finder</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
   <body>
-
     <%= render 'shared/navbar' %>
 
     <p class="notice"><%= notice %></p>
@@ -16,6 +15,5 @@
     <div class="container">
       <%= yield %>      
     </div>
-
   </body>
 </html>
