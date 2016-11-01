@@ -1,3 +1,20 @@
-/* Import Bootstrap styles */
+// Import Bootstrap styles
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+// Gravatar image size
+.avatar-small {
+  width: 28px;
+}
+
+.avatar-medium {
+  width: 48px;
+}
+
+.avatar-large {
+  width: 68px;
+}
+
+.avatar-original {
+  width: 100%;
+}
