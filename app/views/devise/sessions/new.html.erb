@@ -3,6 +3,8 @@
     <h2>Log In</h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= render 'shared/devise_messages' %>
+
       <div class="form-group">
         <%= f.email_field :email, autofocus: true, :class => 'form-control', :placeholder => 'E-Mail' %>
       </div>
