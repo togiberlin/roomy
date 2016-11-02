@@ -1,0 +1,9 @@
+# After filling out, make sure to remove the _example from the filename.
+
+# Transactional mailing service (user confirmation etc)
+sg_user_name: 'SENDGRID_USER_NAME_HERE'
+sg_password: 'SENDGRID_PASSWORD_HERE'
+
+# Log in with Facebook feature
+fb_app_id: 'FACEBOOK_APP_ID_HERE'
+fb_app_secret: 'FACEBOOK_APP_ID_HERE'
