@@ -12,20 +12,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
 
-# Authentication
 gem 'devise'
-
-# Custom popup notifications
 gem 'toastr-rails'
-
-# Mailing service
 gem 'sendgrid-rails'
-
-# Securely config Rails
 gem 'figaro'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
-  gem 'byebug'
+  gem 'pry-rails'
 end
 
 group :development do
