@@ -3,7 +3,97 @@
 @import "bootstrap";
 @import "toastr";
 
-// Gravatar image size
+// General
+
+body {
+  color: #565a5c;
+  background-color: #F8F8F8;
+}
+
+.container {
+  width: 80%;
+}
+
+// Navbar
+
+.navbar-default {
+  background-color: #FFFFFF;
+}
+
+.navbar-default .navbar-brand {
+  color: #a366ff;
+  font-size: 2em;
+  font-weight: 400;
+}
+
+// Buttons
+
+.btn-primary.btn {
+  border: 1px solid #a366ff;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: #a366ff;
+  color: #fff;
+  padding: 10px 25px 10px 25px;
+}
+
+.btn-primary.btn:hover, .btn-primary.btn:focus {
+  border-color: #a366ff;
+  border-bottom-color: #6600ff;
+  background-color: #a366ff;
+  outline: none;
+}
+
+.btn-primary.btn:active {
+  border-color: #3d0099;
+  background-color: #3d0099;
+  outline: none;
+}
+
+.btn-default.btn {
+  width: 100%;
+  border-radius: 2px;
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+// Panels
+
+.panel-default .panel-heading {
+  color: #565a5c;
+  background-color: #edefed;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+// Rows
+
+.row-space-1 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.row-space-2 {
+  margin-top: 12px;
+  margin-bottom: 12px;  
+}
+
+.row-space-3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+// Description
+
+.description {
+  color: #575757;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 25px;
+}
+
+// Avatar image size
+
 .avatar-small {
   width: 28px;
 }
@@ -19,3 +109,4 @@
 .avatar-original {
   width: 100%;
 }
+
