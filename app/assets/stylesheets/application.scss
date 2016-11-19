@@ -66,7 +66,7 @@ body {
   font-weight: 400;
 }
 
-// Rows
+// Rowspace
 
 .row-space-1 {
   margin-top: 6px;
@@ -83,7 +83,7 @@ body {
   margin-bottom: 24px;
 }
 
-// Description
+// User description
 
 .description {
   color: #575757;
@@ -110,3 +110,43 @@ body {
   width: 100%;
 }
 
+// Formular
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-control {
+  border-radius: 2px;
+  height: 4rem;
+}
+
+// Sidebars
+
+.sidebar-list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.sidebar-item {
+  padding: 10px 0;
+  font-size: 16px;
+  color: #82888A;
+  border-bottom: 1px solid #CCC;
+}
+
+.sidebar-link {
+  color: #82888A;
+  text-decoration: none;
+}
+
+.sidebar-link:hover, .sidebar-link:focus {
+  color: #CACCCD;
+  text-decoration: none;
+}
+
+.active.sidebar-link {
+  color: #565A5C;
+  font-weight: bold;
+  text-decoration: none;
+}
