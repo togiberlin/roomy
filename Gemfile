@@ -19,6 +19,7 @@ gem 'sendgrid-rails'
 gem 'figaro'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'paperclip'
 
 group :development, :test do
   gem 'pry-rails'
