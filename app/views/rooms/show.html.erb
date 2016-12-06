@@ -110,7 +110,7 @@
             <% if @photos %>
               <% @photos.each do |photo| %>
                 <div class="item <%= 'active' if photo.id == @photos[0].id %>">
-                  <%= image_tag photo.image.url() %>
+                  <%= image_tag photo.image.url(:original) %>
                 </div>
               <% end %>
             <% end %>
@@ -139,6 +139,26 @@
       <%= render 'map' %>
 
       </div>
+    </div>
+
+    <!-- Nearby rooms -->
+    <h3>Nearby Rooms</h3>
+    <div class="row">
+      <% for room in @room.nearbys(10) %>
+
+        <div class="col-md-4">
+          <div class="panel panel-default">
+            <div class="panel-heading preview">
+              <%= image_tag room.photos[0].image.url(:medium) %>
+            </div>
+
+            <div class="panel-body">
+              <%= link_to room.listing_name, room, data: { no_turbolink: true } %><br />
+              (<%= room.distance.round(2) %> kilometers away)
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
