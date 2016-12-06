@@ -239,3 +239,12 @@ input[type="checkbox"]:checked:before {
   width: 1.25em;
   color: #A366FF;
 }
+
+.room-features li {
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.text-strikethrough {
+  text-decoration: line-through;
+}
