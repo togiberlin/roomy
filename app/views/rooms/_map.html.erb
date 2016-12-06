@@ -1,0 +1,22 @@
+<div id="map"><!-- Google Map --></div>
+
+<script src = "https://maps.googleapis.com/maps/api/js"></script>
+<script>
+  function initialize() {
+    var mapCanvas = document.getElementById('map');
+    var mapOptions = {
+      center: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+      zoom: 16,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+      title: '<%= @room.address %>'
+    });
+
+    marker.setMap(map);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>

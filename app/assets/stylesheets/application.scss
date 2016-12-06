@@ -240,11 +240,20 @@ input[type="checkbox"]:checked:before {
   color: #A366FF;
 }
 
-.room-features li {
+// Room Details
+
+.features li {
   margin-bottom: 10px;
   list-style-type: none;
 }
 
 .text-strikethrough {
   text-decoration: line-through;
+}
+
+// Google Map
+
+#map {
+  width: 100%;
+  height: 400px;
 }
