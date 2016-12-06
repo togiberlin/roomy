@@ -28,6 +28,7 @@ class RoomsController < ApplicationController
       @photos = @room.photos
       redirect_to edit_room_path(@room), notice: 'Saved!'
     else
+      flash[:alert] = "Please fill out all required fields!"
       render :new
     end
   end

@@ -10,4 +10,5 @@ class Room < ActiveRecord::Base
   validates_length_of :listing_name, maximum: 50
   validates_length_of :summary, maximum: 500
   validates_length_of :address, maximum: 100
+  validates_numericality_of :latitude, :longitude
 end
