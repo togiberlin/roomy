@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
   validates_length_of :fullname, maximum: 50
 
   has_many :rooms
+  has_many :reservations
 
   def self.from_omniauth(auth)
     user = User.where(email: auth.info.email).first
