@@ -257,3 +257,11 @@ input[type="checkbox"]:checked:before {
   width: 100%;
   height: 400px;
 }
+
+// Reservation Table
+
+.reservation-table td {
+  width: 100%;
+  border: 1px solid #dce0e0;
+  padding: 10px;
+}
