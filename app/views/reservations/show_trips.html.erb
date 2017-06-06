@@ -1,14 +1,14 @@
 <div class="row">
   <div class="col-md-3">
     <ul class="sidebar-list">
-      <li class="sidebar-item"><%= link_to 'Your Listing', rooms_path, class: 'sidebar-link' %></li>
-      <li class="sidebar-item"><%= link_to 'Your Reservation', rooms_path, class: 'sidebar-link' %></li>
+      <li class="sidebar-item"><%= link_to 'Your Listings', rooms_path, class: 'sidebar-link' %></li>
+      <li class="sidebar-item"><%= link_to 'Your Reservations', show_reservations_path, class: 'sidebar-link' %></li>
       <li class="sidebar-item"><%= link_to 'Your Trips', show_trips_path, class: 'sidebar-link active' %></li>
     </ul>
   </div>
   <div class="col-md-9">
     <div class="panel panel-default">
-      <div class="panel-heading">Listings</div>
+      <div class="panel-heading">Your Trip</div>
       <div class="panel-body">
         <% @trips.each do |trip| %>
           <div class="row">

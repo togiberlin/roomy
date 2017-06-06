@@ -18,4 +18,5 @@ Rails.application.routes.draw do
   get '/preview' => 'reservations#preview'
 
   get '/show_trips' => 'reservations#show_trips'
+  get '/show_reservations' => 'reservations#show_reservations'
 end
