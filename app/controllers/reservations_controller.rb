@@ -2,9 +2,12 @@ class ReservationsController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @reservation = current_user.reservations.create(reservation_params)
-
-    redirect_to @reservation.room, notice: 'Your reservation has been created!'
+    if current_user != room.user
+      @reservation = current_user.reservations.create(reservation_params)
+      redirect_to @reservation.room, notice: 'Your reservation has been created!'
+    else
+      redirect_to @reservation.room, notice: "Sorry, but you can't book your own room."
+    end
   end
 
   def preload
