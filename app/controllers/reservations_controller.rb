@@ -26,6 +26,10 @@ class ReservationsController < ApplicationController
     render json: output
   end
 
+  def show_trips
+    @trips = current_user.reservations
+  end
+
   private
 
   def is_conflict(start_date, end_date)

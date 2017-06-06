@@ -1,2 +1,2 @@
-# HK Room Finder App
-A hotel booking app, written in Ruby on Rails
+# Roomy
+A room booking app, written in Ruby on Rails
