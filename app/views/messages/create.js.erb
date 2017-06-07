@@ -1,0 +1,5 @@
+// After sending message, append message without reloading page (AJAX)
+$('#chat').prepend('<%= j render @message %>');
+
+// Then, reset the text area field
+$('#new_message')[0].reset();
