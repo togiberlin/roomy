@@ -35,10 +35,14 @@
         <% end %>
 
         <li>
-          <a href="#"><i class="fa fa-envelope-o"> Messages</i></a>
+          <%= link_to conversations_path do %>
+            <i class="fa fa-envelope-o"></i> Messages
+          <% end %>
         </li>
         <li>
-          <a href="#"><i class="fa fa-home fa-lg"> Add Your Room</i></a>
+          <%= link_to new_room_path do %>
+            <i class="fa fa-home fa-lg"></i> Add Your Room
+          <% end %>
         </li>
       </ul>
     </div><!--/.nav-collapse -->
