@@ -10,19 +10,40 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+# SASS
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '>= 3.2'
+
+# Icons
 gem 'font-awesome-sass'
 
+# Authentication
 gem 'devise'
+
+# Notifications
 gem 'toastr-rails'
+
+# Emails
 gem 'sendgrid-rails'
+
+# Storing secrets
 gem 'figaro'
+
+# Login with facebook feature
 gem 'omniauth'
 gem 'omniauth-facebook'
+
+# Attaching files & photos
 gem 'paperclip'
+
+# Google Maps feature
 gem 'geocoder'
 
+# Web Sockets, real time messages
+gem 'private_pub'
+gem 'thin'
+
+# Debugging
 group :development, :test do
   gem 'pry-rails'
   gem 'web-console', '~> 2.0'

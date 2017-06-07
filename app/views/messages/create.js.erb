@@ -1,5 +1,8 @@
-// After sending message, append message without reloading page (AJAX)
-$('#chat').prepend('<%= j render @message %>');
+// Use private pub gem to allow real-time message updates
+<% publish_to conversation_messages_path(@conversation) do %>
+  // After sending message, append message without reloading page (AJAX)
+  $('#chat').prepend('<%= j render @message %>');
+<% end %>
 
-// Then, reset the text area field
+// Reset the text area field
 $('#new_message')[0].reset();
