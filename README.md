@@ -14,3 +14,16 @@
 - Then enter ```rackup private_pub.ru -s thin -E production``` to allow some WebSocket magic to happen
 - In the last step, type ```bundle exec rails s``` to start the Rails server
 - Open your browser on ```localhost:3000```
+
+## Extra Features
+### Transactional E-Mails
+[...Authentication e-mails via Sendgrid, Mandrill tbd ...]
+
+### Login with Facebook
+[...tbd...]
+
+### Avatar
+[...Gravatar tbd...]
+
+### PayPal Integration
+[...tbd...]
