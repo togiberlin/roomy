@@ -13,10 +13,10 @@
         <div>
           <strong>
             <%= r.user.fullname %>
-            <%= r.star %>
+            <div id="rating-stars-<%= r.id %>"></div>
           </strong>
           <span class="pull-right">
-            <%= link_to 'Remove My Review', [@room, r], method: :delete, data: { confirm: 'Are you sure?' } %>
+            <%= link_to 'Remove My Review', [@room, r], method: :delete, data: { confirm: 'Are you sure?' } if current_user && current_user == r.user %>
           </span>
         </div>
         <div>
@@ -27,5 +27,12 @@
         </div>
       </div>
     </div>
+    <script>
+      $("#rating-stars-<%= r.id %>").raty({
+        path: '/assets',
+        readOnly: true,
+        score: <%= r.star %>
+      });
+    </script>
   <% end %>
 <% end %>
