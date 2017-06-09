@@ -9,7 +9,7 @@ module ApplicationHelper
     elsif gravatar?(user.email)
       "https://www.gravatar.com/avatar/#{gravatar_id}.jpg?d=identical&s=150"
     else
-      'images/default-user-icon.png'
+      'default-user-icon.png'
     end
   end
 
