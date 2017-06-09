@@ -1,13 +1,46 @@
 class ReservationsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:notify]
 
   def create
     if current_user != room.user
       @reservation = current_user.reservations.create(reservation_params)
-      redirect_to @reservation.room, notice: 'Your reservation has been created!'
+
+      if @reservation
+        # Payment request to PayPal
+        values = {
+          business: ENV["pp_facilitator_email"],
+          cmd: '_xclick',
+          upload: 1,
+          notify_url: ENV["ngrok_notify_link"],
+          amount: @reservation.total,
+          item_name: @reservation.room.listing_name,
+          item_number: @reservation.id,
+          quantity: '1',
+          return: ENV["ngrok_return_link"]
+        }
+
+        redirect_to 'https://www.sandbox.paypal.com/cgi-bin/webscr?' + values.to_query
+      else
+        redirect_to @reservation.room, alert: 'Sorry, but something went wrong.'
+      end
     else
       redirect_to @reservation.room, notice: "Sorry, but you can't book your own room."
     end
+  end
+
+  def notify
+    params.permit!
+    status = params[:payment_status]
+
+    reservation = Reservation.find(params[:item_number])
+
+    if status == 'Completed'
+      reservation.update_attributes status: true
+    else
+      reservation.destroy
+    end
+
+    render nothing: true
   end
 
   def preload

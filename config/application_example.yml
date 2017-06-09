@@ -7,3 +7,8 @@ sg_password: 'SENDGRID_PASSWORD_HERE'
 # Log in with Facebook feature
 fb_app_id: 'FACEBOOK_APP_ID_HERE'
 fb_app_secret: 'FACEBOOK_APP_ID_HERE'
+
+# PayPal integration
+pp_facilitator_email: 'PAYPAL_BUSINESS_SANDBOX_ACCOUNT_HERE'
+ngrok_notify_link: 'NGROK_NOTIFY_LINK_HERE'
+ngrok_return_link: 'NGROK_RETURN_LINK_HERE'

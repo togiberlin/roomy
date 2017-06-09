@@ -27,4 +27,7 @@ Rails.application.routes.draw do
 
   get '/show_trips' => 'reservations#show_trips'
   get '/show_reservations' => 'reservations#show_reservations'
+
+  post '/notify' => 'reservations#notify'
+  post '/show_trips' => 'reservations#show_trips'
 end
