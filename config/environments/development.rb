@@ -44,12 +44,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.sendgrid.net',
-    port: 587,
-    enable_starttls_auto: true,
-    user_name: ENV['sg_user_name'],
-    password: ENV['sg_password'],
-    authentication: 'plain'
+    :user_name => ENV['sg_user_name'],
+    :password => ENV['sg_password'],
+    :domain => 'http://localhost:3000',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
 
     # In case you use Mandrill instead of Sendgrid:
     # address: 'smtp.mandrillapp.com',
