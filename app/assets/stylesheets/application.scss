@@ -291,6 +291,7 @@ input[type="checkbox"]:checked:before {
 }
 
 // Search page
+
 #wrapper {
   width: 960px;
   margin: 0 auto;
@@ -310,4 +311,23 @@ input[type="checkbox"]:checked:before {
 
 #article {
   width: 560px;
+}
+
+// Homepage
+.discovery-card {
+  background-size: cover;
+  background-position: center;
+  height: 326px; 
+}
+
+.va-container {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.va-middle {
+  color: #fff;
+  vertical-align: middle;
+  display: table-cell;
 }
