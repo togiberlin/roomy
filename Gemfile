@@ -43,6 +43,9 @@ gem 'geocoder'
 gem 'private_pub'
 gem 'thin'
 
+# Complex search queries w/ constraints
+gem 'ransack'
+
 # Debugging
 group :development, :test do
   gem 'pry-rails'
