@@ -28,13 +28,16 @@ class PagesController < ApplicationController
     @rooms_array = @rooms.to_a
 
     # If user specified time frame is there, find all rooms within this constraint
-    if (params[:start_date] & params[:end_date] && !params[:start_date].empty? !params[:end_date].empty?)
+    if (params[:start_date] && params[:end_date] && !params[:start_date].empty? & !params[:end_date].empty?)
       start_date = Date.parse(params[:start_date])
       end_date = Date.parse(params[:end_date])
 
       # If room occupied during user specified time frame, remove it from results
       @rooms.each do |room|
         not_available = room.reservations.where(
+          # Case 1: start date occupied, but end date is OK
+          # Case 2: start date OK, but end date is occupied
+          # Case 3: both start and end date are occupied
           "(? <= start_date AND start_date <= ?)
           OR (? <= end_date AND end_date <= ?)
           OR (start_date < ? AND ? < end_date)",
