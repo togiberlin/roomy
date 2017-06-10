@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# To Do: Add seeds for users
+
+# To Do: Add seeds for rooms
+
+# To Do: Add seeds for room photos
