@@ -29,3 +29,28 @@
     </div>
   <% end %>
 </div>
+
+<script>
+  $(function() {
+    // Datepicker for start date
+    $('#start_date').datepicker({
+      dateFormat: 'dd-mm-yyyy',
+      minDate: 0,
+      maxDate: '3m',
+      onSelect: function(selected) {
+        $('#end_date').datepicker('option', 'minDate', selected);
+        $('#end_date').attr('disabled', false);
+      }
+    });
+
+    // Datepicker for end date
+    $('#end_date').datepicker({
+      dateFormat: 'dd-mm-yyyy',
+      minDate: 0,
+      maxDate: '3m',
+      onSelect: function(selected) {
+        $('#start_date').datepicker('option', 'maxDate', selected);
+      }
+    });
+  });
+</script>
