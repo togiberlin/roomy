@@ -1,7 +1,9 @@
 # Roomy
-> A P2P room booking app
+> A fully responsive P2P room booking app
 
-Technology Stack: Ruby on Rails, some JavaScript/jQuery/AJAX, SQLite DB
+This web platform enables you to **search**, **book or advertise your room**. Anytime and anywhere!
+
+Technology Stack: Ruby on Rails, Bootstrap, JavaScript/jQuery, SQLite DB
 
 ## Prerequisites
 - Make sure, to have [Ruby installed](https://www.ruby-lang.org/en/documentation/installation/).
@@ -79,3 +81,20 @@ continue     # continue until next breakpoint
 next         # go to next line of code
 abort        # stop debugging
 ```
+
+## Improvement Points
+The MVP is there, but there are improvement points.
+
+- Design is currently based on Bootstrap. Redesigning the UI and giving the web app more of an individual look would be nice.
+- Replacing all strings inside the view with ```I18n``` placeholder. Store all strings inside dedicated Yaml file. Localization into different languages is then very easy.
+- Replacing ```Test::Unit``` with ```RSpec``` for more readable and documented tests.  Write tests, where at least 90% of the code is triggered (high code coverage).
+- Introducing ```Capybara``` and ```Cucumber``` for UI-testing and UI-test documentation.
+- Add badges for static code analysis tools. E.g. syntax-check, style, security, code duplication etc.
+- Continuos Integration. Automately trigger tests with e.g. ```Travis CI```. All future pull requests muss pass all tests before merging. Green build-status badge is requirement for merging.
+- Deploy under any environment without weird anomalies. Creating a docker image for easier deployment would be nice.
+- With that Docker image, automate the process of deployment via e.g. ```Puppet```, ```Chef```, ```Ansible``` or ```Jenkins```.
+- Don't commit on ```master``` anymore. Create a ```develop``` branch. Work with pull requests. In short: use a proper [branching strategy](http://nvie.com/posts/a-successful-git-branching-model/). Make code reviews necessary.
+- In production, serve static content with ```Nginx``` to avoid unnecessary load.
+- App currently uses Rails version ```4.2.5```. Update to Rails 5 would be cool.
+- Make use of Turbolinks to avoid full page reloads.
+- Or even better, replace frontend with ```React``` and ```Redux``` to outsource more logic (and therefore load) into the client.

@@ -46,7 +46,7 @@ gem 'thin'
 # Complex search queries w/ constraints
 gem 'ransack'
 
-# Debugging
+# Debugging etc.
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug'

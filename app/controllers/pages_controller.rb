@@ -1,8 +1,7 @@
 class PagesController < ApplicationController
   
   def home
-    # .all doesn't scale well. In production, use will_paginate gem for that
-    @rooms = Room.all
+    @rooms = Room.limit(3)
   end
 
   def search

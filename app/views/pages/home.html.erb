@@ -17,6 +17,58 @@
 
 <br>
 
+<div class="text-center">
+  <h2>Trending Cities</h2>
+  <p>Most frequented cities by our users</p>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-4 col-sm-12">
+    <a href="http://localhost:3000/search?utf8=%E2%9C%93&search=San+Francisco">
+      <div class="discovery-card" style="background-image: url('/assets/sf.jpeg')">
+        <div class="va-container">
+          <div class="va-middle text-center">
+            <h2><strong>San Francisco</strong></h2>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-6">
+    <a href="http://localhost:3000/search?utf8=%E2%9C%93&search=Munich">
+      <div class="discovery-card" style="background-image: url('/assets/muc.jpeg')">
+        <div class="va-container">
+          <div class="va-middle text-center">
+            <h2><strong>Munich</strong></h2>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <div class="col-md-4 col-sm-6">
+    <a href="http://localhost:3000/search?utf8=%E2%9C%93&search=Hong+Kong">
+      <div class="discovery-card" style="background-image: url('/assets/hk.jpeg')">
+        <div class="va-container">
+          <div class="va-middle text-center">
+            <h2><strong>Hong Kong</strong></h2>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+<br>
+
+<div class="text-center">
+  <h2>Available Rooms</h2>
+  <p>Check out our cozy rooms!</p>
+</div>
+
 <div class="row">
   <% @rooms.each do |room| %>
     <div class="col-md-4">
@@ -25,6 +77,7 @@
           <%= image_tag room.photos[0].image.url(:medium) if room.photos.length > 0 %>
         </div>
         <div class="panel-body">
+          <%= image_tag avatar_url(room.user), class: 'image-circle avatar-small' %>&nbsp;
           <%= link_to room.listing_name, room %>
         </div>
       </div>
