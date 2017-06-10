@@ -1,5 +1,7 @@
 # Roomy
-> A P2P room booking app, written in Ruby on Rails
+> A P2P room booking app
+
+Technology Stack: Ruby on Rails, some JavaScript/jQuery/AJAX, SQLite DB
 
 ## Prerequisites
 - Make sure, to have [Ruby installed](https://www.ruby-lang.org/en/documentation/installation/).
@@ -9,11 +11,12 @@
 - Fork the application
 - Clone your fork to your machine via ```git clone link_to_forked_repo_here```
 - _Optional_: add this repo as upstream via ```git remote add upstream https://github.com/togiberlin/roomy.git```
-- Check remote repos via ```git remote -v```
+- Check remote repos ```origin``` and ```upstream``` via ```git remote -v```
 - Type ```bundle install``` to install dependencies
-- Then enter ```rackup private_pub.ru -s thin -E production``` to allow some WebSocket magic to happen
+- Then enter ```rackup private_pub.ru -s thin -E production``` to allow some WebSocket real-time messaging magic to happen
+- Check the ```Transactional Emails``` and ```PayPal Integration``` sections below
 - In the last step, type ```bundle exec rails s``` to start the Rails server
-- Open your browser on ```localhost:3000```
+- Open your browser on ```http://localhost:3000```
 
 ## Extra Features
 ### Avatar
@@ -62,6 +65,7 @@ If you want to reset the database, simply run these commands
 bundle exec rake db:drop        # delete entire SQLite database
 bundle exec rake db:create      # create a new SQLite database
 bundle exec rake db:migrate     # run migrations
+bundle exec rake db:seed        # fill the DB with test users, rooms and room photos
 ```
 
 ## Debugging
