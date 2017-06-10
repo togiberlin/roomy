@@ -63,3 +63,15 @@ bundle exec rake db:drop        # delete entire SQLite database
 bundle exec rake db:create      # create a new SQLite database
 bundle exec rake db:migrate     # run migrations
 ```
+
+## Debugging
+If you want to create a breakpoint, simply enter:
+```
+binding.pry
+```
+You can now jump through the code via
+```
+continue     # continue until next breakpoint
+next         # go to next line of code
+abort        # stop debugging
+```

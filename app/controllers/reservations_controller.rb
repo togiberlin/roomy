@@ -1,6 +1,6 @@
 class ReservationsController < ApplicationController
   before_action :authenticate_user!, except: [:notify]
-  protect_from_forgery, except: [:notify, :show_trips] # allow PayPal to redirect back to page
+  protect_from_forgery except: [:notify, :show_trips] # allow PayPal to redirect back to page
 
   def create
     if current_user != room.user
